@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "praveenreddy",
+  "classifications": [ "Common", "Consoledotnet6" ],
+  "identity": "ExampleTemplate.consoledotnet6Project",
+  "name": "Example templates: consoledotnet6 project",
+  "shortName": "consoledotnet6",
+  "sourceName":"consoledotnet6",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
