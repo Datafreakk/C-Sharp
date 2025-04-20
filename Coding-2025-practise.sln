@@ -14,12 +14,15 @@ EndProject
 
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async-1\Async.csproj", "{A2713EB7-DC5D-495A-9278-0CF58F4473A4}"
 
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_one", "Asyncbasic\Async_one.csproj", "{BBD9459E-1B38-4D3D-A20B-077BBB6D6F17}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_two", "Async_two\Async_two.csproj", "{A23C440D-AA9B-453B-AD73-1753935B8BCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_three", "Async_three\Async_three.csproj", "{8DD25A87-9174-44D7-B30E-9599DBD4F984}"
 
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_four", "Async_four\Async_four.csproj", "{DC833A9A-D00C-4D05-92B6-86F569E2BD1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +46,10 @@ Global
 		{8DD25A87-9174-44D7-B30E-9599DBD4F984}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DD25A87-9174-44D7-B30E-9599DBD4F984}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DD25A87-9174-44D7-B30E-9599DBD4F984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC833A9A-D00C-4D05-92B6-86F569E2BD1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC833A9A-D00C-4D05-92B6-86F569E2BD1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC833A9A-D00C-4D05-92B6-86F569E2BD1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC833A9A-D00C-4D05-92B6-86F569E2BD1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +61,7 @@ Global
 		{BBD9459E-1B38-4D3D-A20B-077BBB6D6F17} = {E60171A7-8C47-4B0D-A092-902A8F0B7505}
 		{A23C440D-AA9B-453B-AD73-1753935B8BCA} = {E60171A7-8C47-4B0D-A092-902A8F0B7505}
 		{8DD25A87-9174-44D7-B30E-9599DBD4F984} = {E60171A7-8C47-4B0D-A092-902A8F0B7505}
+		{DC833A9A-D00C-4D05-92B6-86F569E2BD1B} = {E60171A7-8C47-4B0D-A092-902A8F0B7505}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {747EAABB-F564-4077-868C-A7374615152C}
