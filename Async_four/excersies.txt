@@ -1,0 +1,19 @@
+Here are 3 medium-level coding questions in C# on async programming:
+
+**Question 1: Asynchronous Data Processing Pipeline with Throttling**
+
+Design a C# program that simulates processing a large list of data items asynchronously. Each data item requires an asynchronous operation (e.g., a simulated network call or I/O operation) that takes a variable amount of time. To avoid overwhelming a resource, you need to limit the number of concurrent asynchronous operations to a specific maximum (e.g., 5). Implement this using async/await and a mechanism to control the degree of parallelism.
+
+* **Concepts involved:** `async`/`await`, `Task.WhenAll` (potentially with a custom throttling mechanism), `SemaphoreSlim`, handling a collection of asynchronous operations.
+
+**Question 2: Asynchronous Operation with Timeout and Cancellation**
+
+Implement an asynchronous function in C# that performs a simulated long-running operation. This function should accept a `CancellationToken` and a `TimeSpan` for a timeout. If the operation exceeds the timeout or the cancellation token is signalled, the operation should be gracefully cancelled, and an appropriate exception (e.g., `TimeoutException` or `OperationCanceledException`) should be thrown. Demonstrate how to call this function and handle both timeout and cancellation scenarios.
+
+* **Concepts involved:** `async`/`await`, `CancellationTokenSource`, `CancellationToken`, `Task.Delay`, `Task.WhenAny`, exception handling (`try-catch`).
+
+**Question 3: Concurrent Asynchronous Updates with Progress Reporting**
+
+Create a C# application that simulates updating a collection of objects asynchronously and concurrently. Each update operation is an asynchronous task. The application should report progress as the updates complete, showing the percentage of items updated. You need to handle the concurrent nature of the updates while providing a mechanism to track and report the overall progress.
+
+* **Concepts involved:** `async`/`await`, `Task.WhenAll`, `IProgress<T>`, `Progress<T>`, thread-safe collection updates (if necessary, though simple progress reporting might not require explicit locking depending on the approach), handling multiple tasks and their completion.

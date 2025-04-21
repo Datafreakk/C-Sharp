@@ -1,0 +1,24 @@
+Okay, here are 5 C# coding exercises on asynchronous programming (`async`, `Task`, `await`) at medium and hard levels to help you test your knowledge:
+
+**Medium Level:**
+
+1.  **Concurrent Data Retrieval with Aggregation:**
+    You need to retrieve data from three different (simulated) external services concurrently. Each service provides a piece of information (e.g., Service A returns a user ID, Service B returns user details for that ID, Service C returns recent activity for that ID). Create three separate asynchronous methods, each simulating calling one of these services with a `Task.Delay` and returning a specific data type (you can use simple classes or strings). Your main program should call all three methods using `Task.WhenAll`, wait for all results, and then combine the results into a single output object or a formatted string. Ensure you handle potential exceptions if one of the simulated service calls fails.
+
+2.  **Asynchronous File Processing Pipeline:**
+    Imagine you have a list of file paths (you can simulate this with a `List<string>`). You need to asynchronously process each file. Create an asynchronous method `ProcessFileAsync(string filePath)` that simulates reading a file (using `Task.Delay`), performing some processing on its content (e.g., counting words, finding specific patterns - again, simulate this), and returning a result for that file. Your program should initiate the `ProcessFileAsync` method for all files concurrently. Once all files are processed, print a summary of the results (e.g., filename and processed count). Consider how you would handle a scenario where processing a single file takes significantly longer than others.
+
+**Hard Level:**
+
+3.  **Implementing a Simple Asynchronous Producer-Consumer:**
+    Create a scenario where you have a "Producer" and a "Consumer" working asynchronously. The Producer asynchronously generates items (e.g., integers or strings) over time using `Task.Delay` between generating items. The Consumer asynchronously processes these items as they become available. Use a thread-safe collection suitable for concurrent access (like `ConcurrentBag` or a custom implementation with locks, though `ConcurrentBag` is simpler) to hold items waiting to be consumed. Implement mechanisms for the Consumer to wait for new items if the collection is empty and for the Producer to signal when it has finished producing all items. The program should run until all items are produced and consumed.
+
+4.  **Long-Running Operation with Progress and Cancellation:**
+    Develop an asynchronous method that simulates a computationally intensive, long-running task (e.g., finding a large number of prime numbers). This method should:
+    * Accept an `IProgress<int>` object to report its progress (e.g., the percentage of numbers checked or the number of primes found so far).
+    * Accept a `CancellationToken` to allow for cancellation.
+    * Periodically check if cancellation has been requested. If it has, stop the operation gracefully and throw a `TaskCanceledException`.
+    In your main program, start this asynchronous operation. Use a `Progress<int>` to receive and display progress updates. After a few seconds, use a `CancellationTokenSource` to request cancellation of the running task and handle the `TaskCanceledException`.
+
+5.  **Rate-Limited Asynchronous Operations:**
+    You need to make a large number of asynchronous calls to an external API (simulate this with an asynchronous method that takes a number and returns a result after a `Task.Delay`). However, the API has a strict rate limit of allowing only a maximum of `N` concurrent requests at any given time. Implement a mechanism to ensure that no more than `N` API calls are in flight concurrently. You could use techniques like `SemaphoreSlim` to control the level of concurrency. Your program should initiate all the required API calls but manage them so that the rate limit is respected. Print a message indicating when each call starts and finishes to demonstrate the rate limiting is working.
