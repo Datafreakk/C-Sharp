@@ -8,7 +8,7 @@ Design a C# program that simulates processing a large list of data items asynchr
 
 **Question 2: Asynchronous Operation with Timeout and Cancellation**
 
-Implement an asynchronous function in C# that performs a simulated long-running operation. This function should accept a `CancellationToken` and a `TimeSpan` for a timeout. If the operation exceeds the timeout or the cancellation token is signalled, the operation should be gracefully cancelled, and an appropriate exception (e.g., `TimeoutException` or `OperationCanceledException`) should be thrown. Demonstrate how to call this function and handle both timeout and cancellation scenarios.
+
 
 * **Concepts involved:** `async`/`await`, `CancellationTokenSource`, `CancellationToken`, `Task.Delay`, `Task.WhenAny`, exception handling (`try-catch`).
 
