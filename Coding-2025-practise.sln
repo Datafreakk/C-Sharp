@@ -12,9 +12,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basics", "Basics", "{EE12B96F-8824-4799-A64D-6904EC11A199}"
 EndProject
 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async", "Async-1\Async.csproj", "{A2713EB7-DC5D-495A-9278-0CF58F4473A4}"
-
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_one", "Asyncbasic\Async_one.csproj", "{BBD9459E-1B38-4D3D-A20B-077BBB6D6F17}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_two", "Async_two\Async_two.csproj", "{A23C440D-AA9B-453B-AD73-1753935B8BCA}"
