@@ -4,6 +4,8 @@ namespace Delegates;
 
 public delegate int CalcuateSum(int a, int b);
 
+
+
 public class Delegatee // basic delegate instance and passing method as paramaters to delegate instance
 {
     public static int Sumoftwonumbers(int a, int b)
@@ -42,9 +44,11 @@ public class ShapeCaluclator
 
     public static void Main(string[] args)
     {
+        
     ProcessArea(5.0,CalcuateArea);// Short hand for method conversion 
     ProcessArea(5.0,new CaluateAreaa(CalcuateArea)); //Explicutly passing insatcne and again passing method to delegate insatnce (method passing is imp)
     //Note : Here the magic happens , Compilers The compiler notes: "Okay, ProcessArea expects a double for its first argument and an instance of the CaluateAreaa delegate type for its second argument."
     //Core Logic// //Delagte instance , delegate  point to method and keeps a reference  , delegate passed with arguments and matches holded merhod 
+    Action<double> actiondelobj = (double => {Console.WriteLine($"Processed area {result}");} );
     }
 }
