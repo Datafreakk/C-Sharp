@@ -10,11 +10,11 @@ public class ShapeCalculatorr
         return Math.PI * radius * radius;
     }
 
-    public static void CalculateAreafunc(double radius)
-    {
-        double resultt = Math.PI * radius * radius;
-        Console.WriteLine($"{resultt}");
-    }
+    //public static void CalculateAreafunc(double radius)
+    // {
+    //     double resultt = Math.PI * radius * radius;
+    //     Console.WriteLine($"{resultt}");
+    // }
 
     public static void ProcessArea(double val, Func<double,double> calculate) //Func Delegate return return type double 
     {
@@ -33,11 +33,12 @@ class Program
 {
     public static void Main(string[] args)
     {
-        ShapeCalculatorr.ProcessArea(5, ShapeCalculatorr.CalculateArea);// This is Func del call
-        ShapeCalculatorr.ProcessAreaa(5,ShapeCalculatorr.CalculateAreafunc); //This is Action del call
-        ShapeCalculatorr.ProcessAreaa(3, radius => 
+        //ShapeCalculatorr.ProcessArea(5, ShapeCalculatorr.CalculateArea);// This is Func del call
+        //ShapeCalculatorr.ProcessAreaa(5,ShapeCalculatorr.CalculateAreafunc); //This is Action del call
+        ShapeCalculatorr.ProcessAreaa(3, radius =>
             Console.WriteLine
-                ($"Output which Func delegate returns  {Math.PI * radius * radius}"));// This is Action del with lamba
+                ($"Output which Func delegate returns  {Math.PI * radius * radius}")); // This is Action del with lamba
     }
-}
-
+};
+//an u show code for CreateUsingRabbitMq and RabbitMqBusFactoryConfigurator
+//Method wants delegate → you pass lambda or matching method → method creates object → method calls delegate with object → delegate runs your config code → returns void.
