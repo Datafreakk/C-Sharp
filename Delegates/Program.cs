@@ -45,6 +45,6 @@ public class ShapeCaluclator
     ProcessArea(5.0,CalcuateArea);// Short hand for method conversion 
     ProcessArea(5.0,new CaluateAreaa(CalcuateArea)); //Explicutly passing insatcne and again passing method to delegate insatnce (method passing is imp)
     //Note : Here the magic happens , Compilers The compiler notes: "Okay, ProcessArea expects a double for its first argument and an instance of the CaluateAreaa delegate type for its second argument."
-    //Core Logic// //Delagte instance , delegate  point to method and keeps a reference  , delegate passed with arguments and matches holded merhod 
+    //Delagte instance , delegate  point to method and keeps a reference  , delegate passed with arguments and matches holded merhod 
     }
 }
