@@ -1,20 +1,30 @@
 ﻿namespace Delegatewithlamba;
 
+// Options class to be configured
+public class MyServiceOptions
+{
+    public string Url { get; set; } = string.Empty;
+    public int TimeoutSeconds { get; set; }
+    public bool EnableCaching { get; set; }
+    public string Name { get; set; } = string.Empty;
+}
 
-// public static void Myconfigurationmethod(MyServiceOptions myService)
-// {
-//     options.Url = "https://api.myprodservice.com";
-//     options.TimeoutSeconds = 60;
-//     options.EnableCaching = true;
-// }
+// ServiceBuilder which takes a delegate to configure MyServiceOptions
 public class ServiceBuilder
 {
-    public void AddService(Action<MyServiceOptions> dummyref)
+    public void AddService(Action<MyServiceOptions> configure)
     {
-        MyServiceOptions optionsinstance = new MyServiceOptions();
-        dummyref(optionsinstance); //This is calling lamba dummref dummyref = optionsinstance => { optionsinstance.Name = "X"; };
+        // Create instance
+        MyServiceOptions optionsInstance = new MyServiceOptions();
+
+        // Call delegate (lambda) with instance
+        configure(optionsInstance);
+
+        // For demo, print configured values
+        System.Console.WriteLine($"Url: {optionsInstance.Url}");
+        System.Console.WriteLine($"TimeoutSeconds: {optionsInstance.TimeoutSeconds}");
+        System.Console.WriteLine($"EnableCaching: {optionsInstance.EnableCaching}");
     }
-    
 }
 
 public class Program
@@ -22,15 +32,13 @@ public class Program
     public static void Main(string[] args)
     {
         ServiceBuilder builder = new ServiceBuilder();
-        builder.AddService(h =>
+
+        // Passing a lambda to configure options
+        builder.AddService(options =>
         {
-            h.Url = "https://api.myprodservice.com";
-            h.TimeoutSeconds = 60;
-            h.EnableCaching = true;
+            options.Url = "https://api.myprodservice.com";
+            options.TimeoutSeconds = 60;
+            options.EnableCaching = true;
         });
     }
 }
-//Dummref is varaible point to laambda 
-Mental Notes 
-1.When amethod which expects delagte is created , we need to prepare insatnce and pass instance to lambada pinter 
-2.whwover calls this method can directly pass same isnatnce created inside above method with different variable and udpate assigned menst 
