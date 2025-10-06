@@ -6,3 +6,11 @@ riderModule.iml
 /.vs/C-Sharp/FileContentIndex
 /.vs/C-Sharp/v17
 /.vs
+# macOS
+.DS_Store
+
+# Rider / JetBrains
+*.DotSettings.user
+.idea/
+
+
