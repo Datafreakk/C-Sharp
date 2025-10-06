@@ -35,7 +35,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegatewithlamba", "Delega
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstract\Abstract.csproj", "{C5B8EEA7-FF0E-4D3E-9E28-6891EBB19618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compare", "Compare\Compare.csproj", "{DCA61D20-2DE1-46DB-8F3A-6048B8C39015}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compare", "Compare\Compare.csproj", "{48675958-1D17-4E45-B7D5-E21276D7081B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loopss", "Loopss\Loopss.csproj", "{8D78629B-9E73-42E0-8C3A-4C5FAD4C294A}"
 EndProject
 
 Global
@@ -52,10 +54,10 @@ Global
 		{A80690BC-E122-4F4E-8FAE-EB2EFEAEDAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A80690BC-E122-4F4E-8FAE-EB2EFEAEDAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A80690BC-E122-4F4E-8FAE-EB2EFEAEDAB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DCA61D20-2DE1-46DB-8F3A-6048B8C39015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCA61D20-2DE1-46DB-8F3A-6048B8C39015}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCA61D20-2DE1-46DB-8F3A-6048B8C39015}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCA61D20-2DE1-46DB-8F3A-6048B8C39015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D78629B-9E73-42E0-8C3A-4C5FAD4C294A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D78629B-9E73-42E0-8C3A-4C5FAD4C294A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D78629B-9E73-42E0-8C3A-4C5FAD4C294A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D78629B-9E73-42E0-8C3A-4C5FAD4C294A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
