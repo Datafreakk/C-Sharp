@@ -6,7 +6,14 @@ namespace Loops
     {
         static void Main(string[] args)
         {
-            Loop6();
+            RunStudentAnalyzer();
+
+            //calling first foreach 
+            // var nums = new List<int> { 2, 4, 1, 8, 16 };
+            // var outlist = GetEvenSquaresAbove(nums, 4);
+            // Console.WriteLine(string.Join(", ", outlist));
+
+            //
         }
 
         // Excerise -1 
@@ -19,8 +26,8 @@ namespace Loops
                     Console.WriteLine("Current line is: " + i);
                 }
             }
-        } 
-        
+        }
+
         //  Excerise -2: Write a program that asks the user for a number N
         // and calculates the sum of the first N natural numbers using a for loop. 
 
@@ -28,11 +35,12 @@ namespace Loops
         {
             int n = 5;
             int sum = 0;
-            for (int i = 1; i <=n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 sum = sum + i;
-                
+
             }
+
             Console.WriteLine("Sum of first" + n + "natural no's is" + sum);
         }
         
@@ -62,57 +70,86 @@ namespace Loops
             {
                 reversedstr = reversedstr + numstr[i];
             }
+
             Console.WriteLine("reversesd string is " + reversedstr);
             
         }
-        
-        public static void Loop5()
-        {
-            char[] arr  = { 'G', 'e', 'e', 'k' };
-            foreach (char i in arr)
-            {
-                Console.WriteLine(i);
-            }
-        } 
-        
-        public static void Loop6()
-        {
-            string[] stringer = new[] { "Apple", "Bananad", "Camel" };
-            foreach (string i in stringer)
-            {
-                Console.WriteLine(i);
-            }
 
-            List<int> Lister = new List<int> { 1, 2, 3 };
-            
-                foreach (int i in Lister)
+        //Exercie-5
+        public static List<int> GetEvenSquaresAbove(List<int> nums, int threshold)
+        {
+            var result = new List<int>();
+            foreach (var i in nums)
+            {
+                if ((i % 2 == 0) && (i > 4))
                 {
-                    if (i != 0)
-                    {
-                        Console.WriteLine(i);   
-                    }
-                    else
-                    {
-                        Console.WriteLine("Cannot do operation");
-                    }
+                    result.Add(i * i);
                 }
+            }
 
-                Dictionary<string, int> dic = new Dictionary<string, int>
-                {
-                    { "A", 30 },
-                    { "B", 25 },
-                    { "C", 35 }
-                };
+            return result;
+        }
+        
+        //Excerise -6 : Foreach - Student Score Analyzer
+        // you are given a list of students and their scores in different subjects.
+        //     You must:
+        //
+        // Find the average score of each student.
+        //
+        //     Find the student(s) with the highest average.
+        //
+        //     Display all results neatly.
 
-                foreach (KeyValuePair<string, int> i in dic)
+        public static void RunStudentAnalyzer()
+        {
+            List<Student> students = new List<Student>
+            {
+                new Student("praveen",new List<int>{10,20,40}),
+                new Student("Lokesh",new List<int>{20,30,40}),
+                new Student("siva", new List<int> {30,50,50})
+    
+            };
+
+            var Studentavg = new Dictionary<String, double>();
+
+            foreach (var i in students)
+            {
+                double total = 0;
+                int count = 0;
+                
+                foreach (var j in i.Scores)
                 {
-                    Console.WriteLine($"{i.Key}:{i.Value}");
+                    total += j;
+                    count += 1; //count ++
+                    
+                }
+                double avg = total / count;
+                Studentavg[i.Name] = avg;
+                foreach (var kvp in Studentavg)
+                {
+                    Console.WriteLine($"{kvp.Key} -> {kvp.Value}");
                 }
                 
-                // Exercise 1: Count Vowels in a String
-                // Exercise 2: Sum of All Even Numbers in a List
+            }
 
         }
     }
 
-}
+    
+    class Student
+    {
+        public string Name { get; set; }
+        public List<int> Scores { get; set; }
+
+        public Student(string name, List<int> scores)
+        {
+            Name = name;
+            Scores = scores;
+        }
+
+    }
+    
+
+};
+    
+
