@@ -6,7 +6,7 @@ namespace Loops
     {
         static void Main(string[] args)
         {
-            RunStudentAnalyzer();
+            DoWhile();
 
             //calling first foreach 
             // var nums = new List<int> { 2, 4, 1, 8, 16 };
@@ -132,6 +132,44 @@ namespace Loops
                 
             }
 
+        }
+
+        public static void DoWhile()
+        {
+            Random rand = new Random();
+            int target = rand.Next(1, 51);
+            int guess = 0;
+            int attempts = 0;
+
+            while (guess != target)
+            {
+                do
+                {
+                    Console.Write("Enter your guess: ");
+                    string input = (Console.ReadLine() ?? "").Trim();
+                    if (!int.TryParse(input, out guess) || guess < 1 || guess > 50)
+                    {
+                        Console.WriteLine("Invalid input. Enter a number between 1 and 50.");
+                        guess = 0;
+                    }
+
+                } while (guess ==0);
+
+                attempts++;
+
+                if (guess > target)
+                {
+                    Console.WriteLine("Too hugh");
+                    
+                }
+                else if  (guess < target)
+
+                {
+                    Console.WriteLine("Too low");
+                }
+                    
+            }
+            Console.WriteLine($"Correct! The number was {target}. Attempts: {attempts}");
         }
     }
 
