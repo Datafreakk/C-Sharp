@@ -6,7 +6,7 @@ namespace Loops
     {
         static void Main(string[] args)
         {
-            Loop4();
+            Loop6();
         }
 
         // Excerise -1 
@@ -64,6 +64,54 @@ namespace Loops
             }
             Console.WriteLine("reversesd string is " + reversedstr);
             
+        }
+        
+        public static void Loop5()
+        {
+            char[] arr  = { 'G', 'e', 'e', 'k' };
+            foreach (char i in arr)
+            {
+                Console.WriteLine(i);
+            }
+        } 
+        
+        public static void Loop6()
+        {
+            string[] stringer = new[] { "Apple", "Bananad", "Camel" };
+            foreach (string i in stringer)
+            {
+                Console.WriteLine(i);
+            }
+
+            List<int> Lister = new List<int> { 1, 2, 3 };
+            
+                foreach (int i in Lister)
+                {
+                    if (i != 0)
+                    {
+                        Console.WriteLine(i);   
+                    }
+                    else
+                    {
+                        Console.WriteLine("Cannot do operation");
+                    }
+                }
+
+                Dictionary<string, int> dic = new Dictionary<string, int>
+                {
+                    { "A", 30 },
+                    { "B", 25 },
+                    { "C", 35 }
+                };
+
+                foreach (KeyValuePair<string, int> i in dic)
+                {
+                    Console.WriteLine($"{i.Key}:{i.Value}");
+                }
+                
+                // Exercise 1: Count Vowels in a String
+                // Exercise 2: Sum of All Even Numbers in a List
+
         }
     }
 
